@@ -18,6 +18,8 @@ contract DevolutionBase {
     }
     // identifier of the module to its information
     mapping(address => Dao) internal daoRegistry_;
+    //
+    address[] internal allSpokeDaos_;
 
     // -------------------------------------------------------------------------
     // EVENTS
@@ -67,12 +69,17 @@ contract DevolutionBase {
         return empty;
     }
 
+    function getAllSpokeDaos() external view returns(address[] memory) {
+        return allSpokeDaos_;
+    }
+
     // -------------------------------------------------------------------------
     // STATE MODIFYING FUNCTIONS
 
     function addDao() external {
         daoRegistry_[msg.sender].implementation = msg.sender;
         daoRegistry_[msg.sender].inUse = true;
+        allSpokeDaos_.push(msg.sender);
     }
 
     /**
