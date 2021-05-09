@@ -7,9 +7,12 @@ class Welcome extends React.Component {
 
   render() {
     return (
-      <div className={s.root}>
+      <div className={`${s.root}`}>
         <img src={signinImg} alt="signin" className={`${s.dvdImg}`}/>
-        <h5><i>Wait and see...</i></h5>
+        <div className={`${s.imagePart}`,`${s.imagePart1}`}>.</div>
+        <div className={`${s.imagePart}`,`${s.imagePart2}`}>.</div>
+        <div className={`${s.imagePart}`,`${s.imagePart3}`}></div>
+        <div className={`${s.imagePart}`,`${s.imagePart4}`}></div>
       </div>
     );
   }

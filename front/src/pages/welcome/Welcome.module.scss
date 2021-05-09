@@ -1,13 +1,60 @@
 .root {
   text-align: center;
+  padding: 0;
+  height: 3231px;
 
   .dvdImg {
-    opacity: 0.5;
+    z-index: 1000;
+    opacity: 0.65;
     position: absolute;
-    animation: moveX 10s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 120s linear infinite;
-    -webkit-animation: moveX 10s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 120s linear infinite;
-    -moz-animation: moveX 10s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 120s linear infinite;
-    -o-animation: moveX 10s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 120s linear infinite;
+    animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
+    -webkit-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
+    -moz-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
+    -o-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
+  }
+
+  .imagePart1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/landing/part1.png");
+  }
+
+  .imagePart2 {
+    position: absolute;
+    top: 850px;
+    right: 0;
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/landing/part2.png");
+  }
+
+  .imagePart3 {
+    position: absolute;
+    top: 1700px;
+    right: 0;
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/landing/part3.png");
+  }
+
+  .imagePart4 {
+    position: absolute;
+    top: 2550px;
+    right: 0;
+    width: 100%;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/landing/part4.png");
   }
 }
 
@@ -30,14 +77,14 @@
 }
 
 @-webkit-keyframes moveY {
-  from { top: 0; } to { top: 75%; }
+  from { top: 0; } to { top: 500px; }
 }
 @-moz-keyframes moveY {
-  from { top: 0; } to { top: 75%; }
+  from { top: 0; } to { top: 500px; }
 }
 @-o-keyframes moveY {
-  from { top: 0; } to { top: 75%; }
+  from { top: 0; } to { top: 500px; }
 }
 @keyframes moveY {
-  from { top: 0; } to { top: 75%; }
+  from { top: 0; } to { top: 500px; }
 }
