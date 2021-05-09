@@ -1,0 +1,28 @@
+@import '../../styles/app';
+
+.root {
+  .pieElements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &Danger {
+      border-top: 3px solid theme-color("danger")
+    }
+    &Success {
+      border-top: 3px solid theme-color("success")
+    }
+    &Gray {
+      border-top: 3px solid #666666
+    }
+    p {
+      color: rgba(#323232, .6);
+      white-space: nowrap;
+    }
+  }
+
+  .voteSelect {
+    width: 180px;
+    display: inline-block;
+    margin-right: 6px;
+  }
+}
