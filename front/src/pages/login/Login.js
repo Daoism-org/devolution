@@ -128,7 +128,7 @@ class Login extends React.Component {
           className="widget-auth my-auto"
           title={
             <h3 className="mt-0 mb-2" style={{ fontSize: 40, color: "#ccc" }}>
-              Welcome to (D)evolution!
+              Welcome to Devolution!
             </h3>
           }
         >
@@ -155,7 +155,7 @@ class Login extends React.Component {
               {this.props.isFetching ? "Loading..." : "Connect with Torus"}
             </Button>
             <footer className={s.footer}>
-              {new Date().getFullYear()} © (D)evolution - Scaling Ethereum
+              {new Date().getFullYear()} © Devolution - Scaling Ethereum
               Hackathon
             </footer>
           </form>
