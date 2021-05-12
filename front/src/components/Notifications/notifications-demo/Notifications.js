@@ -21,7 +21,7 @@ class NotificationsDemo extends React.Component {
             <Col sm={"10"}>
               <p className="m-0 overflow-hidden">
                 <span>0x97af...87f2</span> invited you to vote on {" "}
-                <span>ANGEL</span> proposal <span>#0002</span>
+                <span>Angel</span> proposal <span>#0002</span>
               </p>
             </Col>
             <Col
@@ -45,7 +45,7 @@ class NotificationsDemo extends React.Component {
             <Col sm={"10"}>
               <p className="m-0 overflow-hidden">
                 <span>0x97af...87f2</span> invited you to join{" "}
-                <span>ANGEL</span> DAO
+                <span>Angel</span> DAO
               </p>
             </Col>
             <Col

@@ -10,6 +10,18 @@ import ApexChart from "react-apexcharts";
 import { chartData } from "./chartsMock";
 
 class YourDAOs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: "0004",
+      name: "Reduce chat rewards"
+    };
+  }
+
+  handleRowSelect = (id, name) => {
+    this.setState({id: id});
+    this.setState({name: name});
+  }
 
   render() {
     return (
@@ -22,7 +34,7 @@ class YourDAOs extends React.Component {
                   title={<p className={"fw-bold"}>Introduction</p>}
                 >
                   <Identicon seed={"ANGEL"} size={6}/>
-                  <span>Planet angel</span>
+                  <span>Planet Angel</span>
                 </Widget>
               </Col>
             </Row>
@@ -31,7 +43,7 @@ class YourDAOs extends React.Component {
                 <Widget
                   title={<p className={"fw-bold"}>Discover active proposals</p>}
                 >
-                  <Table className={"mb-0"} borderless responsive>
+                  <Table className="table-hover" borderless responsive>
                     <thead>
                       <tr>
                         <th key={0} scope="col" className={"pl-0"}>
@@ -49,7 +61,7 @@ class YourDAOs extends React.Component {
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Reduce chat rewards")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0004
@@ -58,20 +70,20 @@ class YourDAOs extends React.Component {
                           <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
                           0x97af..
                         </td>
-                        <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
-                        <td className={"pl-0 fw-thin"}>01 Jan 2021</td>
+                        <td className={"pl-0 fw-thin"}>Reduce chat rewards</td>
+                        <td className={"pl-0 fw-thin"}>9 May 2021</td>
                       </tr>
-                      <tr key={1}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Increase max vote length")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0005
                         </td>
                         <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
-                          0x97af..
+                          <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>
+                          0x4980..
                         </td>
-                        <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
-                        <td className={"pl-0 fw-thin"}>02 Jan 2021</td>
+                        <td className={"pl-0 fw-thin"}>Increase max vote length</td>
+                        <td className={"pl-0 fw-thin"}>10 May 2021</td>
                       </tr>
                     </tbody>
                   </Table>
@@ -83,7 +95,7 @@ class YourDAOs extends React.Component {
                 <Widget
                   title={<p className={"fw-bold"}>Archived proposals</p>}
                 >
-                  <Table className={"mb-0"} borderless responsive>
+                  <Table className="table-hover" borderless responsive>
                     <thead>
                       <tr>
                         <th key={0} scope="col" className={"pl-0"}>
@@ -101,41 +113,41 @@ class YourDAOs extends React.Component {
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Lower rewards from 10 to 5")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-danger mr-3`} />
                           #0001
                         </td>
                         <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
-                          0x97af..
+                          <Identicon seed={"0xe2b450b1fa87fea46a5079ac5abea035c3de11e5"} size={12}/>
+                          0xe2b4..
                         </td>
-                        <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
-                        <td className={"pl-0 fw-thin"}>01 Jan 2021</td>
+                        <td className={"pl-0 fw-thin"}>Lower rewards from 10 to 5</td>
+                        <td className={"pl-0 fw-thin"}>4 May 2021</td>
                       </tr>
-                      <tr key={1}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Voting mecanism change")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0002
                         </td>
                         <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
-                          0x97af..
+                          <Identicon seed={"0x95e0236A1E785E2Af0D408886973089C4C18502c"} size={12}/>
+                          0x95e0..
                         </td>
-                        <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
-                        <td className={"pl-0 fw-thin"}>02 Jan 2021</td>
+                        <td className={"pl-0 fw-thin"}>Voting mecanism change</td>
+                        <td className={"pl-0 fw-thin"}>6 May 2021</td>
                       </tr>
-                      <tr key={1}>
+                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Number of NFT ID's")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0003
                         </td>
                         <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
-                          0x97af..
+                          <Identicon seed={"0x2934523cc6513a6215e463e8564c1f130be8fc44"} size={12}/>
+                          0x2934..
                         </td>
                         <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
-                        <td className={"pl-0 fw-thin"}>03 Jan 2021</td>
+                        <td className={"pl-0 fw-thin"}>7 May 2021</td>
                       </tr>
                     </tbody>
                   </Table>
@@ -145,7 +157,7 @@ class YourDAOs extends React.Component {
           </Col>
           <Col sm={5}>
             <Widget
-              title={<p className={"fw-bold"}>#0001 - Number of NFT ID's</p>}
+              title={<p className={"fw-bold"}>#{this.state.id} - {this.state.name}</p>}
             >
               <Widget title={<p className={"fw-bold"}>Information</p>}>
                 <span><b>Need:</b> 0 NFT Id / 0 Rep. / 0 Gouv.</span><br/>

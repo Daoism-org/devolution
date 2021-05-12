@@ -10,7 +10,7 @@ import {
 } from "../../actions/navigation";
 import { logoutUser } from "../../actions/user";
 
-import logo from "../../images/logo.png";
+import logo from "../../images/logo2.png";
 import welcomeIcon from '../../images/icons/Package_outlined.svg';
 import discoverIcon from '../../images/icons/Core_outlined.svg';
 import daoIcon from '../../images/icons/ui elements_outlined.svg';
@@ -54,7 +54,7 @@ class Sidebar extends React.Component {
         <nav className={s.root}>
           <header className={s.logo}>
             <img src={logo} alt="logo" className={s.logoStyle} />
-            <span style={{color: '#ddd'}}>(D)evolution</span>
+            <span style={{color: '#ddd'}}>Devolution</span>
           </header>
           <h5 className={s.navTitle}>HOME</h5>
           <ul className={s.nav}>
@@ -100,7 +100,7 @@ class Sidebar extends React.Component {
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
               }
               activeItem={this.props.activeItem}
-              header="ANGEL"
+              header="Angel"
               isHeader
               link="/app/dao/angel"
               index="main"
