@@ -103,7 +103,7 @@ describe("Basic Deployment Test", () =>  {
         SpokeDaoInstance = await SpokeDaoContract.deploy(
             DevBaseInstance.address
         );
-        console.log("🛠  Spoke DAO Deployed.");
+        console.log("🛠 Spoke DAO Deployed.");
 
         // ---------------------------------------------------------------------
         // Voting Module

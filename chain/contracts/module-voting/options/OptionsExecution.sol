@@ -27,8 +27,8 @@ contract OptionsExecution is BaseSubModule {
     // -------------------------------------------------------------------------
     // STATE MODIFYING FUNCTIONS
 
-    function registerOptionsOnModule() external override {
-
+    function executeOption() external onlyModule(BaseDaoLibrary.GeneralCensus) {
+        
     }
 
     // -------------------------------------------------------------------------

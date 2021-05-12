@@ -8,7 +8,7 @@
     "build": "npx hardhat --network optimism compile",
     "test-ovm": "npx hardhat --network optimism test",
     "test": "npx hardhat test",
-    "rem": "remixd -s /Users/veronicac/Desktop/projects/freelance/-devolution-contracts --remix-ide https://remix.ethereum.org"
+    "deploy:local": "hardhat run scripts/deploy.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.1",
