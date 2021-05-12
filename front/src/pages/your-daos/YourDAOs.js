@@ -22,7 +22,7 @@ class YourDAOs extends React.Component {
                   title={<p className={"fw-bold"}>Introduction</p>}
                 >
                   <Identicon seed={"ANGEL"} size={6}/>
-                  <span>Planet angel</span>
+                  <span>Planet Angel</span>
                 </Widget>
               </Col>
             </Row>

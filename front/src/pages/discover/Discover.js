@@ -13,6 +13,18 @@ import s from "./Discover.module.scss";
 import Identicon from '../../util/Identicon';
 
 class Discover extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: 1,
+      name: "Angel"
+    };
+  }
+
+  handleRowSelect = (id, name) => {
+    this.setState({id: id});
+    this.setState({name: name});
+  }
 
   render() {
     return (
@@ -33,17 +45,17 @@ class Discover extends React.Component {
                   </thead>
                   {/* eslint-disable */}
                   <tbody>
-                    <tr>
+                    <tr onClick={() => this.handleRowSelect(1, "Angel")} className={`${s.pointer}`}>
                       <td>#1</td>
-                      <td><Identicon seed={"ANGEL"} size={6}/>ANGEL</td>
+                      <td><Identicon seed={"ANGEL"} size={6}/>Angel</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
                     </tr>
-                    <tr>
+                    <tr onClick={() => this.handleRowSelect(2, "Betazed")} className={`${s.pointer}`}>
                       <td>#2</td>
                       <td><Identicon seed={"Betazed"} size={6}/>Betazed</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
                     </tr>
-                    <tr>
+                    <tr onClick={() => this.handleRowSelect(3, "Risa")} className={`${s.pointer}`}>
                       <td>#3</td>
                       <td><Identicon seed={"Risa"} size={6}/>Risa</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
@@ -56,10 +68,10 @@ class Discover extends React.Component {
           </Col>
           <Col sm={5}>
             <Widget
-              title={<p className={"fw-bold"}>#1 - ANGEL DAO</p>}
+              title={<p className={"fw-bold"}>#{this.state.id} - {this.state.name} DAO</p>}
             >
-              <span style={{marginBottom: '12px', display: 'block'}}>Quick description...</span>
-              <Widget title={<p className={"fw-bold"}>Action</p>}>
+              <span style={{marginBottom: '12px', display: 'block'}}>Quick description of {this.state.name}...</span>
+              <Widget title={<p className={"fw-bold"}>Action(s)</p>}>
                 <FormGroup>
                   <Input type="select" name="select" className={`${s.voteSelect}`}>
                     <option>Assign your tokens</option>

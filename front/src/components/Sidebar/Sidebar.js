@@ -100,7 +100,7 @@ class Sidebar extends React.Component {
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
               }
               activeItem={this.props.activeItem}
-              header="ANGEL"
+              header="Angel"
               isHeader
               link="/app/dao/angel"
               index="main"
