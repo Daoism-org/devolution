@@ -5,7 +5,7 @@
 | Contract | Calls |
 |:---------|:------|
 0. Devolution Base | To get a list of all spoke DAOs `getAllSpokeDaos()`
-1. Explorer ID token | `getJoinedSpokes(address _voter)`
+1. Explorer ID token | Getting the users Develution identity token: ` getOwnerToken(address _owner)` Getting the Spoke DAO's the user is a part of: `getJoinedSpokes(address _voter)`
 2. Spoke DAO | `joinSpokeDao()`
 3.1 Voting Booth | Requesting proposal: `registerElection(bytes32 _optionID, bytes calldata _executionParameters, uint256 _expiryTimestamp)`, Voting on proposal: `castBinaryVote(uint256 _propID, bool _vote)` |
 3.2 Proposal Storage | Getting a proposals information: `getProposalInfo(uint256 _propID)`
