@@ -8,6 +8,7 @@ import Identicon from '../../util/Identicon';
 
 import ApexChart from "react-apexcharts";
 import { chartData } from "./chartsMock";
+import ModalPorposal from "./ModalPorposal";
 
 class YourDAOs extends React.Component {
   constructor(props) {
@@ -87,6 +88,7 @@ class YourDAOs extends React.Component {
                       </tr>
                     </tbody>
                   </Table>
+                  <ModalPorposal></ModalPorposal> 
                 </Widget>
               </Col>
             </Row>
