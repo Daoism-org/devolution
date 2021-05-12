@@ -26,6 +26,10 @@ class Discover extends React.Component {
     this.setState({name: name});
   }
 
+  handleBtnClick = (event) => {
+    alert("Joining DAO " + this.state.name + "!")
+  }
+
   render() {
     return (
       <div className={s.root}>
@@ -74,9 +78,10 @@ class Discover extends React.Component {
               <Widget title={<p className={"fw-bold"}>Action(s)</p>}>
                 <FormGroup>
                   <Input type="select" name="select" className={`${s.voteSelect}`}>
+                    <option>Join</option>
                     <option>Assign your tokens</option>
                   </Input>
-                  <Button color="light">Ok</Button>{' '}
+                  <Button color="light" onClick={this.handleBtnClick}>Ok</Button>{' '}
                 </FormGroup>
               </Widget>
             </Widget>

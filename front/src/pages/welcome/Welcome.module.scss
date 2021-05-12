@@ -7,6 +7,7 @@
     z-index: 1000;
     opacity: 0.5;
     position: absolute;
+    cursor: pointer;
     animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
     -webkit-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
     -moz-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
