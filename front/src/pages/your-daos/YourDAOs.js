@@ -10,6 +10,11 @@ import ApexChart from "react-apexcharts";
 import { chartData } from "./chartsMock";
 import ModalPorposal from "./ModalPorposal";
 
+const activeStyle = {
+  color: '#29323a',
+  backgroundColor: 'rgb(0 0 0 / 12%)'
+}
+
 class YourDAOs extends React.Component {
   constructor(props) {
     super(props);
@@ -61,8 +66,8 @@ class YourDAOs extends React.Component {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Reduce chat rewards")} className={`${s.pointer}`}>
+                    <tbody className="text-dark" className={`${s.pointer}`}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Reduce chat rewards")} style={this.state.id == "0004" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0004
@@ -74,7 +79,7 @@ class YourDAOs extends React.Component {
                         <td className={"pl-0 fw-thin"}>Reduce chat rewards</td>
                         <td className={"pl-0 fw-thin"}>9 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Increase max vote length")} className={`${s.pointer}`}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Increase max vote length")} style={this.state.id == "0005" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0005
@@ -114,8 +119,8 @@ class YourDAOs extends React.Component {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Lower rewards from 10 to 5")} className={`${s.pointer}`}>
+                    <tbody className="text-dark" className={`${s.pointer}`}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Lower rewards from 10 to 5")} style={this.state.id == "0001" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-danger mr-3`} />
                           #0001
@@ -127,7 +132,7 @@ class YourDAOs extends React.Component {
                         <td className={"pl-0 fw-thin"}>Lower rewards from 10 to 5</td>
                         <td className={"pl-0 fw-thin"}>4 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Voting mecanism change")} className={`${s.pointer}`}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Voting mecanism change")} style={this.state.id == "0002" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0002
@@ -139,7 +144,7 @@ class YourDAOs extends React.Component {
                         <td className={"pl-0 fw-thin"}>Voting mecanism change</td>
                         <td className={"pl-0 fw-thin"}>6 May 2021</td>
                       </tr>
-                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Number of NFT ID's")} className={`${s.pointer}`}>
+                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Number of NFT ID's")} style={this.state.id == "0003" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0003
