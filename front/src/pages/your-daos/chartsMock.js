@@ -1,18 +1,18 @@
 import config from './config';
 
 const colors = config.app.colors;
-const {gray, danger, success} = colors;
+const {danger, success} = colors;
 
 export const chartData = {
     apex: {
         pie: {
-            series: [25, 2, 15],
+            series: [25, 15],
             options: {
                 chart: {
                     type: 'donut'
                 },
-                colors: [success, gray, danger],
-                labels: ["Yes", "No opinion", "No"],
+                colors: [success, danger],
+                labels: ["Yes", "No"],
                 stroke: {
                     show: false,
                     width: 0
