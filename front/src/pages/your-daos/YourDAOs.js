@@ -48,7 +48,7 @@ class YourDAOs extends React.Component {
                     <thead>
                       <tr>
                         <th key={0} scope="col" className={"pl-0"}>
-                          Id
+                          Proposal ID
                         </th>
                         <th key={1} scope="col" className={"pl-0"}>
                           Initiator
@@ -57,34 +57,46 @@ class YourDAOs extends React.Component {
                           Title
                         </th>
                         <th key={3} scope="col" className={"pl-0"}>
-                          Date
+                          Date 
                         </th>
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Reduce chat rewards")} className={`${s.pointer}`}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Update required unique voters from 1 to 15")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0004
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
-                          0x97af..
+                          0x97a...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Reduce chat rewards</td>
+                        <td className={"pl-0 fw-thin"}>Update required unique voters from 1 to 15</td>
                         <td className={"pl-0 fw-thin"}>9 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Increase max vote length")} className={`${s.pointer}`}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Update required aggregate reputation for a vote from 100 to 250")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
                           #0005
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>
-                          0x4980..
+                          0x498...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Increase max vote length</td>
+                        <td className={"pl-0 fw-thin"}>Update required aggregate reputation for a vote from 100 to 250</td>
                         <td className={"pl-0 fw-thin"}>10 May 2021</td>
+                      </tr>
+                      <tr key={1} onClick={() => this.handleRowSelect("0006", "Update distributed reputation for proposing (action ID #0023) from 5 to 10")} className={`${s.pointer}`}>
+                        <td className="fw-thin pl-0 fw-thin">
+                          <i className={`fa fa-circle text-info mr-3`} />
+                          #0005
+                        </td>
+                        <td className={"pl-0 fw-thin"}>
+                          <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>
+                          0x498...
+                        </td>
+                        <td className={"pl-0 fw-thin"}>Update distributed reputation for proposing (action ID #0023) from 5 to 10</td>
+                        <td className={"pl-0 fw-thin"}>11 May 2021</td>
                       </tr>
                     </tbody>
                   </Table>
@@ -115,40 +127,40 @@ class YourDAOs extends React.Component {
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Lower rewards from 10 to 5")} className={`${s.pointer}`}>
+                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Remove voter 6 (vote ID 6) ")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-danger mr-3`} />
                           #0001
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0xe2b450b1fa87fea46a5079ac5abea035c3de11e5"} size={12}/>
-                          0xe2b4..
+                          0xe2b...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Lower rewards from 10 to 5</td>
+                        <td className={"pl-0 fw-thin"}>Remove voter 6 (vote ID 6)</td>
                         <td className={"pl-0 fw-thin"}>4 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Voting mecanism change")} className={`${s.pointer}`}>
+                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Add reward for joining Angel DAO at 5 reputation tokens")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0002
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x95e0236A1E785E2Af0D408886973089C4C18502c"} size={12}/>
-                          0x95e0..
+                          0x95e...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Voting mecanism change</td>
+                        <td className={"pl-0 fw-thin"}>Add reward for joining Angel DAO at 5 reputation tokens</td>
                         <td className={"pl-0 fw-thin"}>6 May 2021</td>
                       </tr>
-                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Number of NFT ID's")} className={`${s.pointer}`}>
+                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Open Angel DAO joining to public")} className={`${s.pointer}`}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-success mr-3`} />
                           #0003
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x2934523cc6513a6215e463e8564c1f130be8fc44"} size={12}/>
-                          0x2934..
+                          0x293...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Number of NFT ID's</td>
+                        <td className={"pl-0 fw-thin"}>Open Angel DAO joining to public</td>
                         <td className={"pl-0 fw-thin"}>7 May 2021</td>
                       </tr>
                     </tbody>
