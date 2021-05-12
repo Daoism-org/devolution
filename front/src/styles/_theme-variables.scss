@@ -1,13 +1,13 @@
 #root {
   --sidebar-item-active: #F6F6E9;
   --important-notification-color: #A966FF;
-  --badge-item: #086a66;
+  --badge-item: #002525ff;
   --update-notification-color: #A966FF;
   .flatlogic-one,
   .dashboard-light {
     --sidebar-item-active: #fff;
     --logo-color: #fff;
-    --sidebar-bg-color: #086A66;
+    --sidebar-bg-color: #002525ff;
     --sidebar-color: #fff;
     --sidebar-action-bg: #f9fafe;
     --sidebar-item-active-color: "#fff";
@@ -22,7 +22,7 @@
   .dashboard-dark {
     --logo-color: #fff;
 
-    --sidebar-bg-color: #086A66;
+    --sidebar-bg-color: #002525ff;
     --sidebar-color: #fff;
     --sidebar-action-bg: #A966FF;
     --sidebar-item-active: #fff;
@@ -30,7 +30,7 @@
 
     --widget-shadow-color: 115, 162, 208;
 
-    --navbar-bg: #086A66;
+    --navbar-bg: #002525ff;
     --navbar-shadow: 0 15px 20px -20px rgba(var(--widget-shadow-color), 0.1), 0 0 15px rgba(var(--widget-shadow-color), 0.06);
   }
 
@@ -39,7 +39,7 @@
     --sidebar-item-active: #F6F6E9;
     --sidebar-bg-color: #fff;
     --sidebar-color: #F6F6E9;
-    --sidebar-action-bg: #00395F;
+    --sidebar-action-bg: #002525ff;
 
     --sidebar-nav-title-color: #dedede;
 
@@ -51,12 +51,12 @@
 
   .dashboard-sky {
     --logo-color: $white;
-    --sidebar-item-active: #004472;
+    --sidebar-item-active: #002525ff;
     --sidebar-bg-color: #E9EBEF;
-    --sidebar-color: #004472;
+    --sidebar-color: #002525ff;
     --sidebar-action-bg: #DBDEE4;
 
-    --sidebar-nav-title-color: #004472;
+    --sidebar-nav-title-color: #002525ff;
 
     --widget-shadow-color: 115, 162, 208;
 
@@ -81,12 +81,12 @@
 
   .dashboard-rain {
     --logo-color: $white;
-    --sidebar-item-active: #004472;
+    --sidebar-item-active: #002525ff;
     --sidebar-bg-color: #CCDDE9;
-    --sidebar-color: #004472;
+    --sidebar-color: #002525ff;
     --sidebar-action-bg: #BACEDC;
 
-    --sidebar-nav-title-color: #004472;
+    --sidebar-nav-title-color: #002525ff;
 
     --widget-shadow-color: 115, 162, 208;
 
@@ -96,12 +96,12 @@
 
   .dashboard-middle {
     --logo-color: $white;
-    --sidebar-item-active: #004472;
+    --sidebar-item-active: #002525ff;
     --sidebar-bg-color: #D7DFE6;
-    --sidebar-color: #004472;
+    --sidebar-color: #002525ff;
     --sidebar-action-bg: #BDC9D4;
 
-    --sidebar-nav-title-color: #004472;
+    --sidebar-nav-title-color: #002525ff;
 
     --widget-shadow-color: 115, 162, 208;
 
@@ -127,9 +127,9 @@
     --logo-color: $white;
     --sidebar-item-active: #F6F6E9;
     --important-notification-color: #fd5f00;
-    --sidebar-bg-color: #20AE8C;
+    --sidebar-bg-color: #002525ff;
     --sidebar-color: #F6F6E9;
-    --sidebar-action-bg: #119475;
+    --sidebar-action-bg: #002525ff;
     --update-notification-color: #004472;
     --sidebar-nav-title-color: #dedede;
 

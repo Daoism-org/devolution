@@ -8,6 +8,7 @@ import Identicon from '../../util/Identicon';
 
 import ApexChart from "react-apexcharts";
 import { chartData } from "./chartsMock";
+import ModalPorposal from "./ModalPorposal";
 
 class YourDAOs extends React.Component {
   constructor(props) {
@@ -87,6 +88,7 @@ class YourDAOs extends React.Component {
                       </tr>
                     </tbody>
                   </Table>
+                  <ModalPorposal></ModalPorposal> 
                 </Widget>
               </Col>
             </Row>
@@ -169,7 +171,6 @@ class YourDAOs extends React.Component {
                 <FormGroup>
                   <Input type="select" name="select" className={`${s.voteSelect}`}>
                     <option>Yes</option>
-                    <option>No opinion</option>
                     <option>No</option>
                   </Input>
                   <Button color="light">Vote</Button>{' '}
@@ -190,19 +191,13 @@ class YourDAOs extends React.Component {
                   />
                 </Row>
                 <Row className={`justify-content-between`}>
-                  <Col sm={4}>
+                  <Col sm={6}>
                     <div className={`${s.pieElementsSuccess} ${s.pieElements}`}>
                       <h4 className={"mt-3 mb-1"}>25</h4>
                       <p>Yes</p>
                     </div>
                   </Col>
-                  <Col sm={4}>
-                    <div className={`${s.pieElementsGray} ${s.pieElements}`}>
-                      <h4 className={"mt-3 mb-1"}>2</h4>
-                      <p>No opinion</p>
-                    </div>
-                  </Col>
-                  <Col sm={4}>
+                  <Col sm={6}>
                     <div className={`${s.pieElementsDanger} ${s.pieElements}`}>
                       <h4 className={"mt-3 mb-1"}>15</h4>
                       <p>No</p>
