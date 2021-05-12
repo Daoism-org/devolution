@@ -12,6 +12,11 @@ import Widget from "../../components/Widget/Widget";
 import s from "./Discover.module.scss";
 import Identicon from '../../util/Identicon';
 
+const activeStyle = {
+  color: '#29323a',
+  backgroundColor: 'rgb(0 0 0 / 12%)'
+}
+
 class Discover extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +29,10 @@ class Discover extends React.Component {
   handleRowSelect = (id, name) => {
     this.setState({id: id});
     this.setState({name: name});
+  }
+
+  handleBtnClick = (event) => {
+    alert("Joining DAO " + this.state.name + "!")
   }
 
   render() {
@@ -44,18 +53,18 @@ class Discover extends React.Component {
                     </tr>
                   </thead>
                   {/* eslint-disable */}
-                  <tbody>
-                    <tr onClick={() => this.handleRowSelect(1, "Angel")} className={`${s.pointer}`}>
+                  <tbody className={`${s.pointer}`}>
+                    <tr onClick={() => this.handleRowSelect(1, "Angel")} style={this.state.id == 1 ? activeStyle : null}>
                       <td>#1</td>
                       <td><Identicon seed={"ANGEL"} size={6}/>Angel</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
                     </tr>
-                    <tr onClick={() => this.handleRowSelect(2, "Betazed")} className={`${s.pointer}`}>
+                    <tr onClick={() => this.handleRowSelect(2, "Betazed")} style={this.state.id == 2 ? activeStyle : null}>
                       <td>#2</td>
                       <td><Identicon seed={"Betazed"} size={6}/>Betazed</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
                     </tr>
-                    <tr onClick={() => this.handleRowSelect(3, "Risa")} className={`${s.pointer}`}>
+                    <tr onClick={() => this.handleRowSelect(3, "Risa")} style={this.state.id == 3 ? activeStyle : null}>
                       <td>#3</td>
                       <td><Identicon seed={"Risa"} size={6}/>Risa</td>
                       <td><Badge color="gray" className="text-gray" pill>Democracy</Badge></td>
@@ -74,9 +83,10 @@ class Discover extends React.Component {
               <Widget title={<p className={"fw-bold"}>Action(s)</p>}>
                 <FormGroup>
                   <Input type="select" name="select" className={`${s.voteSelect}`}>
+                    <option>Join</option>
                     <option>Assign your tokens</option>
                   </Input>
-                  <Button color="light">Ok</Button>{' '}
+                  <Button color="light" onClick={this.handleBtnClick}>Ok</Button>{' '}
                 </FormGroup>
               </Widget>
             </Widget>
