@@ -10,7 +10,7 @@ import {
 } from "../../actions/navigation";
 import { logoutUser } from "../../actions/user";
 
-import logo from "../../images/logo.png";
+import logo from "../../images/logo2.png";
 import welcomeIcon from '../../images/icons/Package_outlined.svg';
 import discoverIcon from '../../images/icons/Core_outlined.svg';
 import daoIcon from '../../images/icons/ui elements_outlined.svg';

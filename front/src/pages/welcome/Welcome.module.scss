@@ -5,7 +5,7 @@
 
   .dvdImg {
     z-index: 1000;
-    opacity: 0.65;
+    opacity: 0.5;
     position: absolute;
     animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
     -webkit-animation: moveX 15s linear 0s infinite alternate, moveY 15s linear 0s infinite alternate, spin 120s linear infinite;
@@ -22,6 +22,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../../images/landing/part1.png");
+    cursor: pointer;
   }
 
   .imagePart2 {
