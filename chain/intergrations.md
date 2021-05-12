@@ -12,6 +12,18 @@
 <!-- 4. Reputation Coordinator |  -->
 <!-- 3. Vote Coordinator | `getModuleOptions(bytes32 _moduleIdentifier)` -->
 
+Contract addresses: 
+Devolution Base:    0xFED8CfD488fd7D6b8731472D9F0B09d7Af6CF945
+Exploer ID:         0xA47c45D83d5cbC43bfbBE8CE25A8D6235301b8c5
+Spoke DAO:          0xcC066380ec146569b82b01ba007e0784b11F96A7
+Vote Storage:        
+Voting Booth:       0xa0E0d7e743Fcd6D6A6105c92bebf801216fFDf45
+General Census:   
+Options registry:    
+Proposal Storage:   0xd08310D1154AA11a17Cb37A2548A1eEFD5c62AA9
+
+
+
 ## Spoke DAO (i.e a deployed DAO)
 
 #### Join
