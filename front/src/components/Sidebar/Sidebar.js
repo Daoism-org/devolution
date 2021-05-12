@@ -112,40 +112,6 @@ class Sidebar extends React.Component {
               height={"24px"}
             />
             </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="Betazed"
-              isHeader
-              link="/app/dao/betazed"
-              index="main"
-            >
-              <img
-                src={daoIcon}
-                alt="dao"
-                width={"24px"}
-                height={"24px"}
-              />
-            </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="Risa"
-              isHeader
-              link="/app/dao/jan"
-              index="main"
-            >
-              <img
-                src={daoIcon}
-                alt="dao"
-                width={"24px"}
-                height={"24px"}
-              />
-            </LinksGroup>
           </ul>
           <ul className={s.downNav}>
             <hr />

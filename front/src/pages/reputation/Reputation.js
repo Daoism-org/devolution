@@ -151,7 +151,7 @@ class Reputation extends React.Component {
         <Row>
           <Col xl={4}>
             <Widget
-              title={<p style={{ fontWeight: 700 }}>Reputation points</p>}
+              title={<p style={{ fontWeight: 700 }}>Reputation Balance</p>}
               customDropDown
             >
               <Row className={`justify-content-between mt-3`} noGutters>
@@ -181,7 +181,7 @@ class Reputation extends React.Component {
           </Col>
           <Col xl={4}>
             <Widget
-              title={<p style={{ fontWeight: 700 }}>Holded tokens</p>}
+              title={<p style={{ fontWeight: 700 }}>Governance Token Balance</p>}
               customDropDown
             >
               <Row className={`justify-content-between mt-3`} noGutters>
