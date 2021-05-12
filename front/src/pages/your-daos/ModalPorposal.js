@@ -24,25 +24,17 @@ const ModalPorposal = (props) => {
         <ModalBody>
           <h5>Choose module</h5>
           <ButtonGroup>
-            <Button color="light mr-2" onClick={() => setR1Selected(1)} active={r1Selected === 1}>Vote</Button>
-            <Button color="light mr-2" onClick={() => setR1Selected(2)} active={r1Selected === 2}>Governance</Button>
-            <Button color="light" onClick={() => setR1Selected(3)} active={r1Selected === 3}>Treasure</Button>
+            <Button color="light mr-2" onClick={() => setR1Selected(1)} active={r1Selected === 1}>Reputation</Button>
+            <Button color="light mr-2" onClick={() => setR1Selected(2)} active={r1Selected === 2}>Voting</Button>
           </ButtonGroup>
-
 
           <h5 class="mt-4">Option list</h5>
           <span>* select the proposal you want to propose</span><br/>
           <select style={selectStyle} name="proposal" multiple>
-            <option value ="#0004">#0004 - Reduce chat rewards</option>
-            <option value ="#0005">#0005 - Increase max vote length</option>
+            <option value ="#0004">#0004 - Distribution - Update distributed reputation</option>
+            <option value ="#0005">#0005 - General Census - Update required unique voters</option>
+            <option value ="#0006">#0006 - General Census - Update required aggregate reputation for a vote</option>
           </select> 
-
-          <h5 class="mt-4">Voting logic</h5>
-          <ButtonGroup>
-            <Button color="light mr-2" onClick={() => setR2Selected(1)} active={r2Selected === 1}>Governance</Button>
-            <Button color="light mr-2" onClick={() => setR2Selected(2)} active={r2Selected === 2}>Reputation</Button>
-            <Button color="light" onClick={() => setR2Selected(3)} active={r2Selected === 3}>NFT</Button>
-          </ButtonGroup>
         </ModalBody>
         <ModalFooter>
           <Button color="light" onClick={toggle}>Cancel</Button>{' '}

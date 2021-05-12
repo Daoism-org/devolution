@@ -31,6 +31,10 @@ contract OptionsExecution is BaseSubModule {
         
     }
 
+    function registerOptionsOnModule() external override {
+
+    }
+
     // -------------------------------------------------------------------------
     // ONLY EXECUTOR STATE MODIFYING FUNCTIONS
 
