@@ -162,9 +162,10 @@ class YourDAOs extends React.Component {
               title={<p className={"fw-bold"}>#{this.state.id} - {this.state.name}</p>}
             >
               <Widget title={<p className={"fw-bold"}>Information</p>}>
-                <span><b>Need:</b> 0 NFT Id / 0 Rep. / 0 Gouv.</span><br/>
-                <span><b>Start date:</b> 10/10/10</span><br/>
-                <span><b>Expire date:</b> 10/10/10</span>
+                <span><b>Need:</b> 5 NFT IDs | 100 Rep | 0 Gov</span><br/>
+                <span><b>(DD/MM/YYYY)</b></span><br/>
+                <span><b>Start date:</b> 10/05/2021</span><br/>
+                <span><b>Expire date:</b> 15/05/2021</span>
               </Widget>
 
               <Widget title={<p className={"fw-bold"}>Vote</p>}>
