@@ -10,7 +10,7 @@
     "test": "npx hardhat test",
     "local": "npx hardhat node",
     "deploy:local": "hardhat run scripts/ovm-local.js --show-stack-traces",
-    "rem": "remixd -s /Users/veronicac/Desktop/projects/freelance/-devolution-contracts --remix-ide https://remix.ethereum.org"
+    "rem": "remixd -s /Users/veronicac/Desktop/projects/freelance/devolution/chain --remix-ide https://remix.ethereum.org"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.1",

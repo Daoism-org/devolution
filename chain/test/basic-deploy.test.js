@@ -267,6 +267,10 @@ describe("Basic Deployment Test", () =>  {
             );
 
             let currentTime = await VoteBoothInstance.getCurrentTime();
+
+            console.log(bytes32Conversion.toString())
+            console.log(bytesConversion.toString())
+            console.log(currentTime.toString())
             
             let tx = await (
                 await VoteBoothInstance.connect(proposalRequester).registerElection(
