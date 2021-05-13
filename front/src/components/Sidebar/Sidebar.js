@@ -115,7 +115,7 @@ class Sidebar extends React.Component {
             {this.state.joinedList.length == 0 &&
               <span style={emptySpanStyle}>Join a DAO in the Discover tab!</span>
             }
-            {this.state.joinedList.includes("0xcC066380ec146569b82b01ba007e0784b11F96A7") && 
+            {this.state.joinedList.includes("0xFC9372557f71fDE61eF607857a2f113b2Ec9b8c3") &&
               <LinksGroup
                 onActiveSidebarItemChange={activeItem =>
                   this.props.dispatch(changeActiveSidebarItem(activeItem))

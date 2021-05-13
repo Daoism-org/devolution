@@ -9,6 +9,7 @@ import Identicon from '../../util/Identicon';
 import ApexChart from "react-apexcharts";
 import { chartData } from "./chartsMock";
 import ModalPorposal from "./ModalPorposal";
+import { castBinaryVote } from "../../web3api";
 
 const activeStyle = {
   color: '#29323a',
@@ -19,14 +20,26 @@ class YourDAOs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "0004",
-      name: "Reduce chat rewards"
+      id: "1",
+      name: "Updating the general Consensus Requirements for voter engagement from 4 NFTs to 10"
     };
   }
 
   handleRowSelect = (id, name) => {
     this.setState({id: id});
     this.setState({name: name});
+  }
+
+  castVote = (event) => {
+    console.log(`[Web3] Voting on propsal ${this.state.id}`);
+    castBinaryVote(parseInt(this.state.id, 10), true).then(res => {
+      console.log("[Web3] res", res);
+      if(res.hasOwnProperty('stack')){
+        alert("Error while casting :\n" + res["stack"])
+      } else if(res.hasOwnProperty('transactionHash')){
+        alert("Successfully voted on proposal:\n" + res["transactionHash"])
+      }
+    });
   }
 
   render() {
@@ -42,7 +55,7 @@ class YourDAOs extends React.Component {
                   <Identicon seed={"ANGEL"} size={6}/>
                   <span>Planet Angel</span>
                 </Widget>
-              </Col>
+            </Col>
             </Row>
             <Row>
               <Col sm={12}>
@@ -62,50 +75,50 @@ class YourDAOs extends React.Component {
                           Title
                         </th>
                         <th key={3} scope="col" className={"pl-0"}>
-                          Date 
+                          Date
                         </th>
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0004", "Update required unique voters from 1 to 15")} style={this.state.id == "0004" ? activeStyle : null}>
+                      <tr key={0} onClick={() => this.handleRowSelect("1", "Updating the general Consensus Requirements for voter engagement from 4 NFTs to 10")} style={this.state.id == "0004" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
-                          #0004
+                          #1
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x97af3436acA4c78b9d431c43a0Ae5479eCbB796D"} size={12}/>
                           0x97a...
                         </td>
-                        <td className={"pl-0 fw-thin"}>Update required unique voters from 1 to 15</td>
-                        <td className={"pl-0 fw-thin"}>9 May 2021</td>
+                        <td className={"pl-0 fw-thin"}>Updating the general Consensus Requirements for voter engagement from 4 NFTs to 10</td>
+                        <td className={"pl-0 fw-thin"}>15 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0005", "Update required aggregate reputation for a vote from 100 to 250")} style={this.state.id == "0005" ? activeStyle : null}>
+                      <tr key={1} onClick={() => this.handleRowSelect("2", "Update required aggregate reputation for a vote from 100 to 250")} style={this.state.id == "0005" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
-                          #0005
+                          #2
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>
                           0x498...
                         </td>
                         <td className={"pl-0 fw-thin"}>Update required aggregate reputation for a vote from 100 to 250</td>
-                        <td className={"pl-0 fw-thin"}>10 May 2021</td>
+                        <td className={"pl-0 fw-thin"}>17 May 2021</td>
                       </tr>
-                      <tr key={2} onClick={() => this.handleRowSelect("0006", "Update distributed reputation for proposing (action ID #0023) from 5 to 10")} style={this.state.id == "0006" ? activeStyle : null}>
+                      <tr key={2} onClick={() => this.handleRowSelect("3", "Update distributed reputation for proposing (action ID #0023) from 5 to 10")} style={this.state.id == "0006" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
-                          #0006
+                          #3
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>
                           0x498...
                         </td>
                         <td className={"pl-0 fw-thin"}>Update distributed reputation for proposing (action ID #0023) from 5 to 10</td>
-                        <td className={"pl-0 fw-thin"}>11 May 2021</td>
+                        <td className={"pl-0 fw-thin"}>18 May 2021</td>
                       </tr>
                     </tbody>
                   </Table>
-                  <ModalPorposal></ModalPorposal> 
+                  <ModalPorposal></ModalPorposal>
                 </Widget>
               </Col>
             </Row>
@@ -132,41 +145,17 @@ class YourDAOs extends React.Component {
                       </tr>
                     </thead>
                     <tbody className="text-dark">
-                      <tr key={0} onClick={() => this.handleRowSelect("0001", "Remove voter 6 (vote ID 6) ")} style={this.state.id == "0001" ? activeStyle : null}>
+                      <tr key={0} onClick={() => this.handleRowSelect("4", "Remove voter 6 (vote ID 6) ")} style={this.state.id == "0001" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-danger mr-3`} />
-                          #0001
+                          #4
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0xe2b450b1fa87fea46a5079ac5abea035c3de11e5"} size={12}/>
                           0xe2b...
                         </td>
                         <td className={"pl-0 fw-thin"}>Remove voter 6 (vote ID 6)</td>
-                        <td className={"pl-0 fw-thin"}>4 May 2021</td>
-                      </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0002", "Add reward for joining Angel DAO at 5 reputation tokens")} style={this.state.id == "0002" ? activeStyle : null}>
-                        <td className="fw-thin pl-0 fw-thin">
-                          <i className={`fa fa-circle text-success mr-3`} />
-                          #0002
-                        </td>
-                        <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x95e0236A1E785E2Af0D408886973089C4C18502c"} size={12}/>
-                          0x95e...
-                        </td>
-                        <td className={"pl-0 fw-thin"}>Add reward for joining Angel DAO at 5 reputation tokens</td>
-                        <td className={"pl-0 fw-thin"}>6 May 2021</td>
-                      </tr>
-                      <tr key={2} onClick={() => this.handleRowSelect("0003", "Open Angel DAO joining to public")} style={this.state.id == "0003" ? activeStyle : null}>
-                        <td className="fw-thin pl-0 fw-thin">
-                          <i className={`fa fa-circle text-success mr-3`} />
-                          #0003
-                        </td>
-                        <td className={"pl-0 fw-thin"}>
-                          <Identicon seed={"0x2934523cc6513a6215e463e8564c1f130be8fc44"} size={12}/>
-                          0x293...
-                        </td>
-                        <td className={"pl-0 fw-thin"}>Open Angel DAO joining to public</td>
-                        <td className={"pl-0 fw-thin"}>7 May 2021</td>
+                        <td className={"pl-0 fw-thin"}>13 May 2021</td>
                       </tr>
                     </tbody>
                   </Table>
@@ -191,7 +180,7 @@ class YourDAOs extends React.Component {
                     <option>Yes</option>
                     <option>No</option>
                   </Input>
-                  <Button color="light">Vote</Button>{' '}
+                  <Button color="light" onClick={this.castVote}>Vote</Button>{' '}
                 </FormGroup>
               </Widget>
               <Widget title={<p className={"fw-bold"}>Voting Status</p>}>
