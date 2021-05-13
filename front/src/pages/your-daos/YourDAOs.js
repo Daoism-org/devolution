@@ -91,10 +91,10 @@ class YourDAOs extends React.Component {
                         <td className={"pl-0 fw-thin"}>Update required aggregate reputation for a vote from 100 to 250</td>
                         <td className={"pl-0 fw-thin"}>10 May 2021</td>
                       </tr>
-                      <tr key={1} onClick={() => this.handleRowSelect("0006", "Update distributed reputation for proposing (action ID #0023) from 5 to 10")} style={this.state.id == "0006" ? activeStyle : null}>
+                      <tr key={2} onClick={() => this.handleRowSelect("0006", "Update distributed reputation for proposing (action ID #0023) from 5 to 10")} style={this.state.id == "0006" ? activeStyle : null}>
                         <td className="fw-thin pl-0 fw-thin">
                           <i className={`fa fa-circle text-info mr-3`} />
-                          #0005
+                          #0006
                         </td>
                         <td className={"pl-0 fw-thin"}>
                           <Identicon seed={"0x498017d53bc83b839baf118c212fb786eb06fd81"} size={12}/>

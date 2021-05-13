@@ -17,6 +17,14 @@ import daoIcon from '../../images/icons/ui elements_outlined.svg';
 import reputationIcon from '../../images/icons/Profile_outlined.svg';
 import disconnectIcon from '../../images/icons/Logout_outlined.svg';
 
+import { getJoinedSpokes } from '../../web3api';
+
+const emptySpanStyle = {
+  marginLeft: '33px',
+  fontStyle: 'italic',
+  color: 'var(--sidebar-nav-title-color)'
+}
+
 class Sidebar extends React.Component {
   static propTypes = {
     sidebarStatic: PropTypes.bool,
@@ -36,8 +44,10 @@ class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.doLogout = this.doLogout.bind(this);
+    this.state = { //TODO: On join refresh this somehow
+      joinedList: []
+    };
   }
 
   dismissAlert(id) {
@@ -46,6 +56,13 @@ class Sidebar extends React.Component {
 
   doLogout() {
     this.props.dispatch(logoutUser());
+  }
+
+  componentDidMount() {
+    getJoinedSpokes().then(res => {
+      console.log("[Web3] Getting joined Spokes!", res);
+      this.setState({joinedList: res});
+    });
   }
 
   render() {
@@ -95,23 +112,28 @@ class Sidebar extends React.Component {
           </ul>
           <h5 className={s.navTitle}>YOUR DAO'S</h5>
           <ul className={s.nav}>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="Angel"
-              isHeader
-              link="/app/dao/angel"
-              index="main"
-            >
-            <img
-              src={daoIcon}
-              alt="dao"
-              width={"24px"}
-              height={"24px"}
-            />
-            </LinksGroup>
+            {this.state.joinedList.length == 0 &&
+              <span style={emptySpanStyle}>Join a DAO in the Discover tab!</span>
+            }
+            {this.state.joinedList.includes("0xcC066380ec146569b82b01ba007e0784b11F96A7") && 
+              <LinksGroup
+                onActiveSidebarItemChange={activeItem =>
+                  this.props.dispatch(changeActiveSidebarItem(activeItem))
+                }
+                activeItem={this.props.activeItem}
+                header="Angel"
+                isHeader
+                link="/app/dao/angel"
+                index="main"
+              >
+              <img
+                src={daoIcon}
+                alt="dao"
+                width={"24px"}
+                height={"24px"}
+              />
+              </LinksGroup>
+            }
           </ul>
           <ul className={s.downNav}>
             <hr />
