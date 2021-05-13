@@ -75,6 +75,10 @@
     width: 100%;
   }
 
+  .auth-btn-disabled {
+    cursor: not-allowed;
+  }
+
   .social-buttons {
     display: flex;
     align-items: stretch;

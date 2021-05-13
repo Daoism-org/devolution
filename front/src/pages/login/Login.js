@@ -133,6 +133,7 @@ class Login extends React.Component {
           }
         >
           <p className="widget-auth-info">
+            Network: <i>Kovan Test Network</i><br/>
             Please connect your wallet to access the app!
           </p>
           <form className="mt" onSubmit={() => {}}>
@@ -147,10 +148,11 @@ class Login extends React.Component {
             </Button>
             <Button
               color="warning"
-              className="auth-btn mb-3"
+              className="auth-btn mb-3 auth-btn-disabled"
               size="sm"
               name="torus"
-              onClick={this.doLogin}
+              // onClick={this.doLogin}
+              title="Work in progress"
             >
               {this.props.isFetching ? "Loading..." : "Connect with Torus"}
             </Button>
