@@ -36,7 +36,7 @@ import arrowActive from "../../images/Arrow 5.svg";
 
 import s from "./Header.module.scss"; // eslint-disable-line css-modules/no-unused-class
 import Identicon from "../../util/Identicon";
-import getOpenLogin from "../../openlogin";
+//import getOpenLogin from "../../openlogin";
 import web3L2 from "../../web3L2";
 
 const Web3 = require("web3");
@@ -151,14 +151,15 @@ class Header extends React.Component {
   }
 
   getAddr = async () => {
-    const openlogin = await getOpenLogin();
+    //const openlogin = await getOpenLogin();
     try {
-      if (openlogin && openlogin.privKey) {
-        const account = web3L2.eth.accounts.privateKeyToAccount(
-          openlogin.privKey
-        );
-        this.setState({ account: account.address });
-      } else if (window.ethereum) {
+      // if (openlogin && openlogin.privKey) {
+      //   const account = web3L2.eth.accounts.privateKeyToAccount(
+      //     openlogin.privKey
+      //   );
+      //   this.setState({ account: account.address });
+      // } else 
+      if (window.ethereum) {
         const web3 = new Web3(Web3.givenProvider || "http://localhost:8080");
         const accounts = await web3.eth.getAccounts();
         this.setState({ account: accounts[0] });

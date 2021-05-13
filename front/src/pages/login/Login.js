@@ -7,8 +7,8 @@ import Widget from "../../components/Widget";
 import { loginUser } from "../../actions/user";
 import s from "./Login.module.scss";
 import signinImg from "../../images/logo_fullsize.png";
-import web3 from "../../web3L2";
-import getOpenLogin from "../../openlogin";
+//import web3 from "../../web3L2";
+//import getOpenLogin from "../../openlogin";
 
 class Login extends React.Component {
   static propTypes = {
@@ -36,12 +36,12 @@ class Login extends React.Component {
   }
 
   async componentDidMount() {
-     const openlogin = await getOpenLogin()
-     if (openlogin && openlogin.privKey && !Login.isAuthenticated()) {
-       this.props.dispatch(
-         loginUser({ email: this.state.email, password: this.state.password })
-       );
-     }
+    //  const openlogin = await getOpenLogin()
+    //  if (openlogin && openlogin.privKey && !Login.isAuthenticated()) {
+    //    this.props.dispatch(
+    //      loginUser({ email: this.state.email, password: this.state.password })
+    //    );
+    //  }
      if (Login.isAuthenticated()) {
        this.props.history.push("/app/main");
      }
@@ -55,17 +55,17 @@ class Login extends React.Component {
     this.setState({ password: event.target.value });
   }
 
-  async importUserAccount(privateKey) {
-    const account = web3.eth.accounts.privateKeyToAccount(privateKey);
-    let balance = await web3.eth.getBalance(account.address);
-    let address = account.address;
-    return { balance, address };
-  }
+  // async importUserAccount(privateKey) {
+  //   const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+  //   let balance = await web3.eth.getBalance(account.address);
+  //   let address = account.address;
+  //   return { balance, address };
+  // }
 
   async doLogin(e) {
     e.preventDefault();
-    console.log(e.target);
-    if (e.target.name === "metamask") {
+    //console.log(e.target);
+    //if (e.target.name === "metamask") {
       if (window.ethereum) {
         try {
           const address = await window.ethereum.enable();
@@ -85,16 +85,16 @@ class Login extends React.Component {
           "🦊 You must install Metamask into your browser: https://metamask.io/download.html"
         );
       }
-    } else {
-      try {
-        const privKey = (await getOpenLogin()).login({
-          loginProvider: "google",
-          redirectUrl: `${window.origin}/login`,
-        });
-      } catch (error) {
-        console.log("error", error);
-      }
-    }
+    // } else {
+    //   try {
+    //     const privKey = (await getOpenLogin()).login({
+    //       loginProvider: "google",
+    //       redirectUrl: `${window.origin}/login`,
+    //     });
+    //   } catch (error) {
+    //     console.log("error", error);
+    //   }
+    // }
   }
 
   googleLogin() {
